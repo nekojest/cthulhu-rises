@@ -1,0 +1,230 @@
+[gd_scene load_steps=32 format=3 uid="uid://vhjk7pj33py"]
+
+[ext_resource type="Texture2D" uid="uid://ib3jpwg3ci3f" path="res://art/cthulhu/cthulhu-idle-sheet.png" id="1_6kn45"]
+[ext_resource type="Script" path="res://Cthulhu.gd" id="1_54mbi"]
+[ext_resource type="Texture2D" uid="uid://b2dy4fpkh3l1k" path="res://art/cthulhu/cthulu-walk-sheet.png" id="2_3oo0g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku3tu"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(0, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ee3p"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(1920, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yisw"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(3840, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpleo"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(5760, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w8wm"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(7680, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1g265"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(9600, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkr5t"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(11520, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx1ct"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(13440, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7c1c"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(15360, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gfhn"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(17280, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s23nj"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(19200, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pfw2"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(21120, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mrp1"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(23040, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giri0"]
+atlas = ExtResource("1_6kn45")
+region = Rect2(24960, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8mno"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(0, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxt0u"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(1920, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1wcr"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(3840, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddk00"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(5760, 0, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi1dq"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(0, 1120, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kqrv"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(1920, 1120, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rki1t"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(3840, 1120, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y05kt"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(5760, 1120, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jthsw"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(0, 2240, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l1i2"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(1920, 2240, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3t41"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(3840, 2240, 1920, 1120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8p0x"]
+atlas = ExtResource("2_3oo0g")
+region = Rect2(5760, 2240, 1920, 1120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_paakd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku3tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ee3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yisw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpleo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w8wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1g265")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkr5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx1ct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7c1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gfhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s23nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pfw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mrp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giri0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8mno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxt0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1wcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddk00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi1dq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kqrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rki1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y05kt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jthsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l1i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3t41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8p0x")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u7vld"]
+radius = 115.0
+height = 280.0
+
+[node name="Cthulhu" type="CharacterBody2D"]
+position = Vector2(9533, 2725)
+script = ExtResource("1_54mbi")
+metadata/_edit_group_ = true
+
+[node name="CthulhuSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9397, -2614)
+scale = Vector2(0.418638, 0.418638)
+sprite_frames = SubResource("SpriteFrames_paakd")
+animation = &"idle"
+speed_scale = 1.5
+metadata/_aseprite_wizard_config_ = {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "res://art",
+"o_name": "",
+"only_visible": false,
+"op_exp": true,
+"source": "res://art/cthulhu/cthulu.aseprite"
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9403, -2586)
+scale = Vector2(1.08108, 1)
+shape = SubResource("CapsuleShape2D_u7vld")
