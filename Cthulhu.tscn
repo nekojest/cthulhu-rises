@@ -204,12 +204,12 @@ radius = 115.0
 height = 280.0
 
 [node name="Cthulhu" type="CharacterBody2D"]
-position = Vector2(9533, 2725)
+position = Vector2(457, 350)
 script = ExtResource("1_54mbi")
 metadata/_edit_group_ = true
 
 [node name="CthulhuSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(-9397, -2614)
+position = Vector2(114, -38)
 scale = Vector2(0.418638, 0.418638)
 sprite_frames = SubResource("SpriteFrames_paakd")
 animation = &"idle"
@@ -225,6 +225,10 @@ metadata/_aseprite_wizard_config_ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9403, -2586)
+position = Vector2(109, -2)
 scale = Vector2(1.08108, 1)
 shape = SubResource("CapsuleShape2D_u7vld")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(110, -5)
+zoom = Vector2(-0.895, -0.895)
