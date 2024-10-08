@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _ready():
-	$CollisionShape2D.disabled = false
+	$CollisionShape2D.disabled = false	
 	$CthulhuSprite.play(&"idle")
 
 

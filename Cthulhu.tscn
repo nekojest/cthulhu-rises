@@ -204,7 +204,7 @@ radius = 115.0
 height = 280.0
 
 [node name="Cthulhu" type="CharacterBody2D"]
-position = Vector2(457, 350)
+position = Vector2(460, 477)
 script = ExtResource("1_54mbi")
 metadata/_edit_group_ = true
 
@@ -225,10 +225,6 @@ metadata/_aseprite_wizard_config_ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(109, -2)
+position = Vector2(110, -12)
 scale = Vector2(1.08108, 1)
 shape = SubResource("CapsuleShape2D_u7vld")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(110, -5)
-zoom = Vector2(-0.895, -0.895)
