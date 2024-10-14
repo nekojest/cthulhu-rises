@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://codcdcuetihm4"
-path="res://.godot/imported/2atk_7.png-d4e98902018845f1e6b9214df31d4b2c.ctex"
+uid="uid://gkdisa31afj3"
+path="res://.godot/imported/cthulu6.png-affbacd97a17e1c0149191ebcb59cfa9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/cthulhu/2atk/2atk_7.png"
-dest_files=["res://.godot/imported/2atk_7.png-d4e98902018845f1e6b9214df31d4b2c.ctex"]
+source_file="res://art/cthulhu/short_atk/cthulu6.png"
+dest_files=["res://.godot/imported/cthulu6.png-affbacd97a17e1c0149191ebcb59cfa9.ctex"]
 
 [params]
 

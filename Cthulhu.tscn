@@ -1,8 +1,15 @@
-[gd_scene load_steps=32 format=3 uid="uid://vhjk7pj33py"]
+[gd_scene load_steps=39 format=3 uid="uid://vhjk7pj33py"]
 
 [ext_resource type="Texture2D" uid="uid://ib3jpwg3ci3f" path="res://art/cthulhu/cthulhu-idle-sheet.png" id="1_6kn45"]
 [ext_resource type="Script" path="res://Cthulhu.gd" id="1_54mbi"]
 [ext_resource type="Texture2D" uid="uid://b2dy4fpkh3l1k" path="res://art/cthulhu/cthulu-walk-sheet.png" id="2_3oo0g"]
+[ext_resource type="Texture2D" uid="uid://dr5h5xcv2a3dr" path="res://art/cthulhu/short_atk/cthulu1.png" id="3_soc47"]
+[ext_resource type="Texture2D" uid="uid://desbmy6jljd5s" path="res://art/cthulhu/short_atk/cthulu2.png" id="4_4y16b"]
+[ext_resource type="Texture2D" uid="uid://dvjnuh65mxk7b" path="res://art/cthulhu/short_atk/cthulu3.png" id="5_kqckx"]
+[ext_resource type="Texture2D" uid="uid://bndepeevuy6k8" path="res://art/cthulhu/short_atk/cthulu4.png" id="6_ep8da"]
+[ext_resource type="Texture2D" uid="uid://bwxemi6sdj76p" path="res://art/cthulhu/short_atk/cthulu5.png" id="7_dedvi"]
+[ext_resource type="Texture2D" uid="uid://gkdisa31afj3" path="res://art/cthulhu/short_atk/cthulu6.png" id="8_dt3h5"]
+[ext_resource type="Texture2D" uid="uid://clpi7upvyggbd" path="res://art/cthulhu/short_atk/cthulu7.png" id="9_a86g4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ku3tu"]
 atlas = ExtResource("1_6kn45")
@@ -159,6 +166,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_soc47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4y16b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kqckx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ep8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dedvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dt3h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a86g4")
+}],
+"loop": true,
+"name": &"short_atk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_m8mno")
 }, {
 "duration": 1.0,
@@ -196,7 +229,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 4.0
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u7vld"]
@@ -212,7 +245,7 @@ metadata/_edit_group_ = true
 position = Vector2(114, -38)
 scale = Vector2(0.418638, 0.418638)
 sprite_frames = SubResource("SpriteFrames_paakd")
-animation = &"idle"
+animation = &"walk"
 speed_scale = 1.5
 metadata/_aseprite_wizard_config_ = {
 "layer": "",
