@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
+var is_attacking = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -23,11 +24,12 @@ func _physics_process(delta):
 	# Play short attack animation and enable hitbox	
 	if Input.is_action_just_pressed("short_atk")  and is_on_floor():
 		$CthulhuSprite.play("short_atk")
+		is_attacking = true
 		
 
 	var direction = Input.get_axis("move_left", "move_right")
-	if direction:
-		$CthulhuSprite.play(&"walk")
+	if direction and !is_attacking:
+		$CthulhuSprite.play("walk")
 		velocity.x = direction * SPEED
 		if velocity.x < 0:
 			$CthulhuSprite.flip_h = true
@@ -35,11 +37,14 @@ func _physics_process(delta):
 			$CthulhuSprite.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		#$CthulhuSprite.play(&"idle")
 
+	# Do not remove; allows the body to move
 	move_and_slide()
 
 
 func _on_cthulhu_sprite_animation_finished() -> void:
-	print("triggers?")
+	var current_anim = $CthulhuSprite.get_animation()
+	if current_anim == "short_atk":
+		is_attacking = false
+		
 	$CthulhuSprite.play("idle")
