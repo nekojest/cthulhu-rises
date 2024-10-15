@@ -37,6 +37,10 @@ func _physics_process(delta):
 			$CthulhuSprite.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	if !direction and !is_attacking:
+		$CthulhuSprite.play("idle")
+		
 
 	# Do not remove; allows the body to move
 	move_and_slide()
@@ -46,5 +50,4 @@ func _on_cthulhu_sprite_animation_finished() -> void:
 	var current_anim = $CthulhuSprite.get_animation()
 	if current_anim == "short_atk":
 		is_attacking = false
-		
-	$CthulhuSprite.play("idle")
+		$CthulhuSprite.play("idle")
