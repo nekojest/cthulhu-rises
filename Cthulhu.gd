@@ -18,7 +18,9 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor_only():
+		print("should play")
+		$CthulhuSprite.play("fly")
 		velocity.y = JUMP_VELOCITY
 		
 	# Play short attack animation and enable hitbox	
@@ -29,17 +31,19 @@ func _physics_process(delta):
 		
 
 	var direction = Input.get_axis("move_left", "move_right")
-	if direction and !is_attacking:
-		$CthulhuSprite.play("walk")
+	if direction and !is_attacking :
 		velocity.x = direction * SPEED
 		if velocity.x < 0:
 			$CthulhuSprite.flip_h = true
 		else:
 			$CthulhuSprite.flip_h = false
+			
+		if velocity.y == 0:
+			$CthulhuSprite.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
-	if !direction and !is_attacking:
+	if !direction and !is_attacking and velocity.y == 0:
 		$CthulhuSprite.play("idle")
 		
 
