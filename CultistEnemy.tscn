@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://duaa2le82km8f"]
+[gd_scene load_steps=12 format=3 uid="uid://duaa2le82km8f"]
 
+[ext_resource type="Script" path="res://CultistEnemy.gd" id="1_ihpsd"]
 [ext_resource type="Texture2D" uid="uid://bbva33ayap4nv" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_1.png" id="1_yxev3"]
 [ext_resource type="Texture2D" uid="uid://cadx4xblfjbpw" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_2.png" id="2_whtkm"]
 [ext_resource type="Texture2D" uid="uid://drls8b8uon45h" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_3.png" id="3_aagkr"]
@@ -44,16 +45,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfqdh"]
 size = Vector2(175.244, 168.891)
 
-[node name="CultistEnemy" type="CharacterBody2D"]
+[node name="CultistEnemy" type="Area2D"]
 scale = Vector2(1.56, 1.56)
+script = ExtResource("1_ihpsd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="CultistSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(294.723, 173.853)
 scale = Vector2(3.02192, 3.02192)
 sprite_frames = SubResource("SpriteFrames_fmbwh")
 animation = &"walk"
-frame_progress = 0.607508
+frame_progress = 0.0496131
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="DefaultCollision" type="CollisionShape2D" parent="."]
 position = Vector2(397.237, 228.676)
 shape = SubResource("RectangleShape2D_hfqdh")
