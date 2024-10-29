@@ -937,11 +937,12 @@ tile_set = SubResource("TileSet_nrehb")
 [node name="LeftWorldBoundary" type="StaticBody2D" parent="."]
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWorldBoundary"]
+[node name="BoundaryCollision" type="CollisionShape2D" parent="LeftWorldBoundary"]
 position = Vector2(-39, 307)
 shape = SubResource("RectangleShape2D_mm182")
 
 [node name="Cthulhu" parent="." instance=ExtResource("3_padac")]
+z_index = 1
 position = Vector2(197, 479)
 platform_floor_layers = 4278190081
 platform_wall_layers = 1

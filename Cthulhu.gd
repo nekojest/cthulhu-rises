@@ -27,6 +27,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("short_atk") and is_on_floor():
 		$CthulhuSprite.play("short_atk")
 		$CthulhuSprite.set_speed_scale(3)
+		$ShortAttackCollision.disabled = false
 		is_attacking = true
 		
 
@@ -55,5 +56,6 @@ func _on_cthulhu_sprite_animation_finished() -> void:
 	var current_anim = $CthulhuSprite.get_animation()
 	if current_anim == "short_atk":
 		$CthulhuSprite.set_speed_scale(1.5)
+		$ShortAttackCollision.disabled = true
 		is_attacking = false
 		$CthulhuSprite.play("idle")
