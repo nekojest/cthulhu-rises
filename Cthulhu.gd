@@ -9,7 +9,8 @@ var is_attacking = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	$DefaultCollision.disabled = false	
+	$CthulhuCollision.disabled = false	
+	$ShortAttackCollision.disabled = true
 	$CthulhuSprite.play("idle")
 
 func _physics_process(delta):
@@ -18,12 +19,12 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor_only():
+	if Input.is_action_just_pressed("jump") and is_on_floor_only() and !is_attacking:
 		$CthulhuSprite.play("fly")
 		velocity.y = JUMP_VELOCITY
 		
 	# Play short attack animation and enable hitbox	
-	if Input.is_action_just_pressed("short_atk")  and is_on_floor():
+	if Input.is_action_just_pressed("short_atk") and is_on_floor():
 		$CthulhuSprite.play("short_atk")
 		$CthulhuSprite.set_speed_scale(3)
 		is_attacking = true

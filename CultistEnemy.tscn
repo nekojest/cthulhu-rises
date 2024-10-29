@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://duaa2le82km8f"]
+
+[ext_resource type="Texture2D" uid="uid://bbva33ayap4nv" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_1.png" id="1_yxev3"]
+[ext_resource type="Texture2D" uid="uid://cadx4xblfjbpw" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_2.png" id="2_whtkm"]
+[ext_resource type="Texture2D" uid="uid://drls8b8uon45h" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_3.png" id="3_aagkr"]
+[ext_resource type="Texture2D" uid="uid://bgaloknf5l7xo" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_4.png" id="4_d1b70"]
+[ext_resource type="Texture2D" uid="uid://cn0nor2hjasoa" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_5.png" id="5_nryc6"]
+[ext_resource type="Texture2D" uid="uid://ccln3fknd2m2y" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_6.png" id="6_wlyoi"]
+[ext_resource type="Texture2D" uid="uid://c3r8k62gp53ek" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_7.png" id="7_0fwer"]
+[ext_resource type="Texture2D" uid="uid://c13mhhws5folw" path="res://art/cultist/Individual Sprite/Walk/Bringer-of-Death_Walk_8.png" id="8_ns5tn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fmbwh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yxev3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_whtkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aagkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d1b70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nryc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wlyoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0fwer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ns5tn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfqdh"]
+size = Vector2(175.244, 168.891)
+
+[node name="CultistEnemy" type="CharacterBody2D"]
+scale = Vector2(1.56, 1.56)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(294.723, 173.853)
+scale = Vector2(3.02192, 3.02192)
+sprite_frames = SubResource("SpriteFrames_fmbwh")
+animation = &"walk"
+frame_progress = 0.607508
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(397.237, 228.676)
+shape = SubResource("RectangleShape2D_hfqdh")

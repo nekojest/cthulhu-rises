@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://00hy7kcflh1a"]
+[gd_scene load_steps=9 format=4 uid="uid://00hy7kcflh1a"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_fwx7t"]
 [ext_resource type="Texture2D" uid="uid://bv6x24ixa5xwb" path="res://art/tilemaps/mainlev_build.png" id="3_4tkkl"]
 [ext_resource type="PackedScene" uid="uid://vhjk7pj33py" path="res://Cthulhu.tscn" id="3_padac"]
 [ext_resource type="Texture2D" uid="uid://mmyp0p1dvris" path="res://art/background_cave.png" id="4_7uhyp"]
+[ext_resource type="PackedScene" uid="uid://duaa2le82km8f" path="res://CultistEnemy.tscn" id="5_8ny0h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_db4hg"]
 texture = ExtResource("3_4tkkl")
@@ -956,3 +957,7 @@ offset_right = 5953.0
 offset_bottom = 2455.0
 scale = Vector2(0.313226, 0.313226)
 texture = ExtResource("4_7uhyp")
+
+[node name="CultistEnemy" parent="." instance=ExtResource("5_8ny0h")]
+position = Vector2(583, 328)
+scale = Vector2(0.904194, 0.910636)
