@@ -941,6 +941,14 @@ metadata/_edit_group_ = true
 position = Vector2(-39, 307)
 shape = SubResource("RectangleShape2D_mm182")
 
+[node name="RightWorldBoundary" type="StaticBody2D" parent="."]
+position = Vector2(1222, -3)
+metadata/_edit_group_ = true
+
+[node name="BoundaryCollision" type="CollisionShape2D" parent="RightWorldBoundary"]
+position = Vector2(-39, 307)
+shape = SubResource("RectangleShape2D_mm182")
+
 [node name="Cthulhu" parent="." instance=ExtResource("3_padac")]
 z_index = 1
 position = Vector2(197, 479)
