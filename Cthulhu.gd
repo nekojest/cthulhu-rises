@@ -59,3 +59,7 @@ func _on_cthulhu_sprite_animation_finished() -> void:
 		is_attacking = false
 		$CthulhuSprite.play("idle")
 		
+
+
+func _on_short_attack_area_area_entered(area: Area2D) -> void:
+	print("AREA ENTEEEEERED")
