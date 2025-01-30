@@ -21,3 +21,7 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		print("Cthulhu entered")
+		
+
+func _on_area_entered(area: Area2D) -> void:
+	queue_free()
