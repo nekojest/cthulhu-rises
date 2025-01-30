@@ -47,6 +47,7 @@ size = Vector2(175.244, 168.891)
 
 [node name="CultistEnemy" type="Area2D"]
 scale = Vector2(1.56, 1.56)
+collision_mask = 0
 script = ExtResource("1_ihpsd")
 
 [node name="CultistSprite" type="AnimatedSprite2D" parent="."]
