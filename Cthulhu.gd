@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-signal hit
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
 var is_attacking = false
@@ -9,8 +8,8 @@ var is_attacking = false
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	$CthulhuCollision.disabled = false	
-	$ShortAttackArea/ShortAttackCollision.disabled = true
+	$CthulhuCollisionShape.disabled = false	
+	$ShortAttackArea/ShortAttackShape.disabled = true
 	$CthulhuSprite.play("idle")
 
 func _physics_process(delta):
@@ -27,7 +26,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("short_atk") and is_on_floor():
 		$CthulhuSprite.play("short_atk")
 		$CthulhuSprite.set_speed_scale(3)
-		$ShortAttackArea/ShortAttackCollision.disabled = false
+		$ShortAttackArea/ShortAttackShape.disabled = false
 		is_attacking = true
 		
 
@@ -56,7 +55,7 @@ func _on_cthulhu_sprite_animation_finished() -> void:
 	var current_anim = $CthulhuSprite.get_animation()
 	if current_anim == "short_atk":
 		$CthulhuSprite.set_speed_scale(1.5)
-		$ShortAttackArea/ShortAttackCollision.disabled = true
+		$ShortAttackArea/ShortAttackShape.disabled = true
 		is_attacking = false
 		$CthulhuSprite.play("idle")
 		

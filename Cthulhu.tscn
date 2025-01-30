@@ -261,9 +261,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xkceq"]
-radius = 112.85
-height = 272.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_trvad"]
+radius = 111.925
+height = 276.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqos6"]
 radius = 27.0
@@ -289,17 +289,14 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://art/cthulhu/cthulu.aseprite"
 }
 
-[node name="CthulhuCollision" type="Area2D" parent="."]
-position = Vector2(110, -12)
+[node name="CthulhuCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(110, -5)
 scale = Vector2(1.08108, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CthulhuCollision"]
-position = Vector2(-1.85, 9)
-shape = SubResource("CapsuleShape2D_xkceq")
+shape = SubResource("CapsuleShape2D_trvad")
 
 [node name="ShortAttackArea" type="Area2D" parent="."]
 
-[node name="ShortAttackCollision" type="CollisionShape2D" parent="ShortAttackArea"]
+[node name="ShortAttackShape" type="CollisionShape2D" parent="ShortAttackArea"]
 position = Vector2(304, -21)
 rotation = -1.57079
 scale = Vector2(1.39464, -1.35472)

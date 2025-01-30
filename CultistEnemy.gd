@@ -9,4 +9,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$CultistSprite.position.x -= 1.2
+	# $CultistSprite.position.x -= 1.2
+	pass
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		print("Cthulhu entered")
